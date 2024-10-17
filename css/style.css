@@ -6,16 +6,14 @@
 
 body{
     background-color: #000000e5;
-    display: block;
-    flex-direction: column;
-    /* position: relative; */
 }
 
 #nav-bar{
 background-color: gray;
-position: fixed;
+position: sticky;
 left: 0;
 top: 0;
+right: 0;
 width: 100%;
 z-index: 9999;
 }
@@ -24,7 +22,7 @@ z-index: 9999;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
     height: 15vh;
     padding: 0.5rem;
 }
@@ -38,12 +36,12 @@ height: 3.5em;
 }
 
 #nav-bar .container .menu{
-    margin-left: 1.8em;
+    padding-right: 1.8em;
 }
 
 #nav-bar .container .menu ul{
     display: flex;
-    align-content: center;
+    /* align-content: center; */
     
 }
 
@@ -67,13 +65,16 @@ height: 3.5em;
     padding: 0.8rem;
     border-radius: 5px;
     background-color: rgb(116, 119, 122);
-    transition: 0.3s;
-    
+    transition: 0.3s ease; 
+}
+
+.main{
+    width:100%;
+    height: fit-content;
 }
 
 #search{
-    top: 5.5em;
-    position: absolute;
+    position: relative;
     background-image: url(/Assets/images/pexels-chanwalrus-958545.jpg);
     background-position:center ;
     background-repeat: no-repeat;
@@ -87,33 +88,46 @@ height: 3.5em;
 
 #search::before{
     content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.527);
+    top: 0;
+    left: 0;
+    z-index: 5;
    
 }
 
 #search .search-bar{
     width: 80%;
+    z-index: 9;
 
 
 }
 
 #search .search-bar form input{
     width: 80%;
-    height: 2.5em;
+    height: 3.5em;
     border-radius: 10px 0px 0px 10px ;
+    border: none;
+    padding: 1em;
+    background-color: rgba(240, 248, 255, 0.829);
 }
 
 #search .search-bar form button{
-     width: 20%;
-    height: 2.5em;
+     width: 18%;
+    height: 3.5em;
     border-radius: 0px 10px 10px 0px ;
     background-color: rgba(238, 21, 21, 0.966);
     color: aliceblue;
+    border: none;
+    margin-left: .5em;
 }
 
 #explore{
-    height: fit-content;
-    position:absolute;
-    top: 18em;
+    height: 40em;
+    /* position:absolute; */
+    /* top: 18em; */
     background-color: #000000e5;
     width: 100%;
     color: aliceblue;
@@ -147,20 +161,45 @@ height: 3.5em;
 
 #explore .explore .ex-bottom .f-img{
     flex-basis: 27%;
-    /* position: absolute; */
+    padding: 1em;
+    /* position: relative; */
 }
 
-/* #explore .explore .ex-bottom .f-img::before{
-    position: relative;
-    content: '';
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.363);
-    height: 100%;
+ #explore .explore .ex-bottom .f-img::before{
+    position: sticky;
+    content: 'Jollof Rice';
+    font-size: 1.2rem;
+    top: 35em;
+    left: 9em;
+    background-color: rgba(0, 0, 0, 0.568);
+    height: 15%;
     width: 100%;
     z-index: 4;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0.5em 2em;
+    display: none;
+} 
 
-} */
+#explore .explore .ex-bottom .f-img:hover::before{
+    display: contents;
+    transform: rotate(10deg);
+    transition: 0.9s ease-in;
+    top: 30em;
+    left: 9em;
+
+}
+
+#explore .explore .ex-bottom .f-img:nth-child(2)::before{
+    content: 'Fried Rice';
+    left: 30em;
+
+}
+
+#explore .explore .ex-bottom .f-img:nth-child(3)::before{
+    content: 'Waakye';
+    left: 51em;
+
+}
 
 #explore .explore .ex-bottom .f-img img{
     width: 100%;
@@ -168,8 +207,142 @@ height: 3.5em;
     border-radius: 20px;
 }
 
-.item{
-    width: 1000px;
-    height: 700px;
-    background-color: aqua;
+#menu{
+    width: 100%;
+    height: fit-content;
+    padding: 3em;
+}
+
+#menu .menu{
+    width: 100%;
+}
+
+#menu .menu h1{
+     font-family: cursive;
+    font-weight: 600;
+    font-size: 2.5em;
+    letter-spacing: 0.2em;
+    text-align: center;
+    color: aliceblue;
+
+}
+
+#menu h2{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#menu h2 a{
+    
+    text-decoration: none;
+    color: rgb(240, 248, 255);
+}
+
+#menu .menu .m-bottom{
+    width: 100%;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 2fr 2fr;
+    padding: 2em;
+}
+
+#menu .menu .f-item{
+    background-color: rgb(134, 140, 156);
+    border-radius: 1opx;
+    display: flex;
+    height: 13em;
+    width:100%;
+    padding: 1em;
+    border-radius: 1.5em;
+}
+
+#menu .menu .f-item .f-img{
+    width: 30%;
+    height: 100%;
+              
+}
+
+#menu .menu .f-item .f-img img{
+    height: 8em;
+    width: 100%;
+    border-radius: 1em;
+
+}
+
+#menu .menu .f-item .f-info{
+    width: 70%;
+    height: 100%;
+    padding-left: 1.5em;
+}
+
+#menu .menu .f-item .f-info h3{
+    margin: .3rem 0;
+    font-size: 1.2em;
+}
+
+#menu .menu .f-item .f-info h4{
+    line-height: .5em;
+    margin: .6rem 0;
+    font-size: 1.2em;
+}
+
+#menu .menu .f-item .f-info p{
+    margin: .8rem 0;
+}
+
+#menu .menu .f-item .f-info button{
+    margin: .8rem 0;
+    background-color: rgb(36, 36, 73);
+    border: none;
+    padding: 1.5em;
+    color: white;
+    border-radius: 1em;
+}
+
+#footer{
+    width: 100%;
+    height: 9em;
+    background-color: rgb(70, 74, 78);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer .social-banner{
+    width: 100%;
+    background-color: rgb(99, 122, 143);
+    height: 6em;
+    display: flex;
+    justify-content: center;
+}
+
+#footer .social-items{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+#footer .social-item{
+    padding: 1.5em;
+}
+
+#footer .social-items .social-item img{
+    height: 3em;
+    width: 3em;
+}
+
+#footer  p{
+    padding: 1em;
+}
+
+/* Media Queries  */
+
+/* 
+  ##Device = Most Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  /* for nav-bar  */
+  
+  
 }

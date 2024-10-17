@@ -1,0 +1,144 @@
+#order{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+}
+
+#order .selected-meal{
+    /* background-color: aqua; */
+    padding: 2em;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#order .order-card{
+    display: flex;
+    background-color: gray;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 3em; */
+    width: 50%;
+    height: fit-content;
+    border-radius: 0 .5em .5em .5em;
+}
+
+#order .meal-img{
+    width: 40%;
+    margin: .5em;
+}
+
+#order .meal-img img{
+    padding: .4em 0;
+    border-radius: 1em;
+
+}
+
+#order .order-quantity{
+    width: 60%;
+    padding: 1em;
+}
+
+#order .order-quantity form{
+    width: 100%;
+    margin: 1em 0;
+}
+
+#order .order-quantity form input{
+    width: 100%;
+    height: 2.5em;
+    padding: .5em;
+    border: aliceblue solid 0.1em;
+    height: 3em;
+    background-color: rgb(230, 234, 240);
+    border-radius: .5em;
+}
+
+#order .order-quantity h5{
+    font-size: 1.2em;
+    padding: 1em;
+}
+
+#order .a-header{
+    width: 50%;
+}
+
+#order .b-title{
+    top: 1em;
+    background-color:gray;
+    width: fit-content;
+    text-align: center;
+    padding: 1em 1em -0.5em 1em;
+    border-radius: .2em .2em 0em 0em;
+    font-size: 50%;
+
+}
+
+#order .delivery-info{
+    /* background-color: aqua; */
+    padding: 2em;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#order .delivery-form{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    padding: 2em;
+    align-items: center;
+    width: 50%;
+    height: fit-content;
+    border-radius: 0 .5em .5em .5em;
+}
+
+#order .delivery-form form{
+    width: 60%;
+    margin: 1em;
+}
+
+#order .delivery-form form input{
+    /* margin: 2em; */
+    padding: .5em;
+    border: aliceblue solid 0.1em;
+    width: 100%;
+    height: 3em;
+    background-color: rgb(230, 234, 240);
+    border-radius: .5em;
+}
+
+/* #order .delivery-form form(){
+    height: 50em;
+    background-color: aqua;
+} */
+
+#order .delivery-form h5{
+    font-size: 1.2em;
+    padding: 1em;
+}
+
+#order .delivery-form button{
+    background-color: rgb(75, 75, 110);
+    padding: .7em;
+    width: 40%;
+    border: none;
+    border-radius: .5em;
+
+}
+
+
+#order .delivery-form button a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.1em;
+}
+
+
+img{
+    width: 100%;
+}
