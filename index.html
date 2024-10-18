@@ -11,16 +11,26 @@
      <section id="nav-bar">
         <div class="container">
             <div class="logo">
-                <a href="">
+                <a href="./index.html">
                     <img src="./Assets/images/My_Logo.png" alt="Tasty cafe logo">
                 </a>
             </div>
             <div class="menu text-right">
+                 <ul class="sidebar">
+                  <li onclick=hideSidebar() class="close"><img src="./Assets/images/icons8-close-48.png" alt=""></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./categories.html">Categories</a></li>
+                    <li><a href="./order.html">Order</a></li>
+                </ul>
+                
                 <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./categories.html">Categories</a></li>
                     <li><a href="./order.html">Order</a></li>
                 </ul>
+                <div onclick=showSidebar() class="hamburger">
+                  <img src="./Assets/images/icons8-menu-squared-96.png" alt="">
+                </div>
             </div>
         </div>
      </section>
@@ -124,7 +134,16 @@
          </footer>
 
           <!-- footer ends here  -->
-
     </div>
+    <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+       function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+      }
+    </script>
   </body>
 </html>
