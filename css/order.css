@@ -5,6 +5,12 @@
     padding: 3em;
 }
 
+#order h1{
+    color: aliceblue;
+    font-size: 90%;
+    font-family: cursive;
+}
+
 #order .selected-meal{
     /* background-color: aqua; */
     padding: 2em;
@@ -97,8 +103,8 @@
 }
 
 #order .delivery-form form{
-    width: 60%;
-    margin: 1em;
+    width: 80%;
+    margin: .5em;
 }
 
 #order .delivery-form form input{
@@ -109,6 +115,7 @@
     height: 3em;
     background-color: rgb(230, 234, 240);
     border-radius: .5em;
+    text-wrap: wrap;
 }
 
 /* #order .delivery-form form(){
@@ -119,6 +126,16 @@
 #order .delivery-form h5{
     font-size: 1.2em;
     padding: 1em;
+}
+
+#order .delivery-form .addy{
+    min-height: 12em;
+    padding-top: 0;
+    padding-bottom: 7em;
+}
+
+#order .delivery-form .addy::placeholder{
+    text-wrap: wrap;
 }
 
 #order .delivery-form button{
@@ -150,6 +167,11 @@ img{
   ##Screen = B/w 320px to 479px
 */
 @media (min-width: 320px) and (max-width: 480px) {
+
+#order{
+    padding: 10%;
+}
+
   #order .order-card{
     width: 100%;
     flex-direction: column;
@@ -157,6 +179,15 @@ img{
   
 }
 
+ #order .selected-meal , #order .delivery-info {
+    width: 100%;
+    padding: 1em 1%;
+}
+
+#order .order-quantity {
+    max-width: 40em;
+}
+
 #order .a-header{
     width: 100%;
 }
@@ -166,12 +197,18 @@ img{
 }
   
 
-#order , .selected-meal{
-    padding: 0 5%;
+#order .delivery-form{
+    width: 100% ;
 }
 
-#order .delivery-form{
-    width: 100%;
+#order .delivery-info form input , #order .delivery-info form{
+     max-width: 45em;
+}
+
+#order .meal-img{
+    width: 65%;
+}
+
 }
 
 /* 
@@ -179,14 +216,46 @@ img{
  ##Screen = B/w 481px to 767px
 */
 @media (min-width: 481px) and (max-width: 767px) {
+
+    #order{
+    padding: 10%;
+}
+
+  #order .order-card{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
   
+}
+
+ #order .selected-meal , #order .delivery-info {
+    width: 100%;
+    padding: 1em 1%;
+}
+
+#order .order-quantity {
+    max-width: 40em;
+}
+
 #order .a-header{
     width: 100%;
 }
 
 #order .b-title{
-    width: 100%;
     align-self: flex-start;
+}
+  
+
+#order .delivery-form{
+    width: 100% ;
+}
+
+ #order .delivery-info form input , #order .delivery-info form{
+     max-width: 45em;
+} 
+
+#order .meal-img{
+    width: 65%;
 }
   
 }
@@ -195,7 +264,42 @@ img{
   ##Device = Tablets, Ipads (landscape)  ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #order{
+    padding: 10%;
+}
+
+  #order .order-card{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
   
+}
+
+ #order .selected-meal , #order .delivery-info {
+    width: 100%;
+    padding: 1em 1%;
+}
+
+#order .order-quantity {
+    max-width: 40em;
+}
+
+#order .a-header{
+    width: 100%;
+}
+
+#order .b-title{
+    align-self: flex-start;
+}
+  
+
+#order .delivery-form{
+    width: 100% ;
+}
+
+#order .delivery-info form input , #order .delivery-info form{
+   max-width: 45em;
+}
   
   
 }
@@ -204,22 +308,42 @@ img{
   ##Device = Tablets, Ipads (portrait)  ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
-  
-  #nav-bar .container .menu ul{
-    display: none
+    #order{
+    padding: 10%;
 }
-  #explore .explore .ex-bottom{
+
+  #order .order-card{
+    width: 100%;
     flex-direction: column;
-    padding: 2em;
-    gap: 2em;
+    align-items: center;
+  
 }
 
-#menu .menu .m-bottom{
-    grid-template-columns: 1fr;
+ #order .selected-meal , #order .delivery-info {
+    width: 100%;
+    padding: 1em 1%;
 }
 
-#explore , #menu{
-    padding: 10% 20%;
+#order .order-quantity {
+    max-width: 40em;
 }
+
+#order .a-header{
+    width: 100%;
+}
+
+#order .b-title{
+    align-self: flex-start;
+}
+  
+
+#order .delivery-form{
+    width: 100% ;
+}
+
+#order .delivery-info form input , #order .delivery-info form{
+   max-width: 45em;
+}
+  
   
 }
