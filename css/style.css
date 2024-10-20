@@ -142,18 +142,18 @@ width: 80%;
 }
 
 #search .search-bar form input{
-    width: 78%;
+    width: 70%;
     height: 2.5em;
-    border-radius: 10px 0px 0px 10px ;
+    border-radius: 1em 0 0 1em;
     border: none;
     padding: 1em;
     background-color: rgba(240, 248, 255, 0.829);
 }
 
 #search .search-bar form button{
-     width: 18%;
+     width: 25%;
     height: 2.5em;
-    border-radius: 0px 10px 10px 0px ;
+    border-radius: 0 1em 1em  0 ;
     background-color: rgba(41, 22, 112, 0.966);
     color: aliceblue;
     border: none;
