@@ -393,6 +393,10 @@ width: 80%;
 button{
     width: fit-content;
 }
+
+#menu .menu .f-item .f-img{
+width: 40%;
+}
   
   
 }
@@ -418,6 +422,10 @@ button{
 
 #explore , #menu{
     padding: 10%;
+}
+
+#menu .menu .f-item .f-img{
+width: 40%;
 }
   
 }
